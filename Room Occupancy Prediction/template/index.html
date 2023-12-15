@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Occupancy Prediction</title>
+    <link rel="stylesheet" href="/staticFiles/style.css">
+</head>
+<body>
+    <div>
+        <form action="{{url_for('predict')}}" method="post">
+            <h1 align="center">Room Occupancy</h1>
+        <div>
+            <label for="temperature">Temperature:</label>
+            <input type="text" id="temperature" name="Temperature">
+        </div>
+        <div>
+            <label for="humidity">Humidity:</label>
+            <input type="text" id="humidity" name="Humidity">
+        </div>
+        <div>
+            <label for="light">Light:</label>
+            <input type="text" id="light" name="Light">
+        </div>
+        <div>
+            <label for="co2">CO2:</label>
+            <input type="text" id="co2" name="CO2">
+        </div>
+        <div>
+            <label for="humidity_ratio">Humidity Ratio:</label>
+            <input type="text" id="humidity_ratio" name="HumidityRatio">
+        </div>
+    </form>
+
+            <br><br>
+            <center> <button type="submit" id="sub">Prediction</button> </center>
+
+        </form>
+
+        <br><br>
+        {{Prediction_Text}}
+    </div>
+</body>
+</html>
